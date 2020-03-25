@@ -130,12 +130,14 @@
 
 					<!-- Top -->
 					<header class="masthead" id="Top">
+						<a href="/">
 						<div class="container d-flex h-100 align-items-center">
 						<div class="mx-auto text-center">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/bar_one_logo_wt.png" id="logo"/>
 							<h2 class="text-white-50 mx-auto mt-2 mb-5">One good thing about music, when it hits you, you feel no pain.</h2>
 						</div>
 						</div>
+						</a>
 					</header>
 				
 				<!--
