@@ -28,7 +28,7 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  require_once( 'library/youtube.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -253,5 +253,20 @@ function return_stylesheet_directory_url() {
   return get_stylesheet_directory_uri();
 }
 add_shortcode('styles', 'return_stylesheet_directory_url');
+
+function add_post_category_archive( $wp_query ) {
+  if ($wp_query->is_main_query() && $wp_query->is_category()) {
+  $wp_query->set( 'post_type', array('post','note','youtube'));
+  }
+}
+add_action( 'pre_get_posts', 'add_post_category_archive' , 10 , 1);
+
+function add_post_tag_archive( $wp_query ) {
+  if ($wp_query->is_main_query() && $wp_query->is_tag()) {
+  $wp_query->set( 'post_type', array('post','note','youtube'));
+  }
+}
+add_action( 'pre_get_posts', 'add_post_tag_archive' , 10 , 1)
+  
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
