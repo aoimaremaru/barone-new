@@ -84,7 +84,10 @@
 						<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="menuButton">
 							<i class="fas fa-bars"></i>
 						</button>
+						
+
 						<div class="collapse navbar-collapse" id="navbarResponsive">
+						<?php if ( is_home() || is_front_page() ) : ?>
 							<ul class="navbar-nav ml-auto">
 							<li class="nav-item">
 								<a class="nav-link js-scroll-trigger" href="#About">About</a>
@@ -102,6 +105,25 @@
 								<a class="nav-link js-scroll-trigger" href="#Access">Access</a>
 							</li>
 							</ul>
+						<?php else : ?>
+							<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="/about">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="/live">Live</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="/food">Food</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="/drink">Drink</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link js-scroll-trigger" href="/access">Access</a>
+							</li>
+							</ul>
+						<?php endif; ?>
 						</div>
 						</div>
 					</nav>
