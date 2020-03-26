@@ -38,6 +38,9 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+		<!-- Bootstrap core CSS -->
+		<link href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/bootstrap.min.css" rel="stylesheet">
+
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
@@ -45,8 +48,7 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
-		<!-- Bootstrap core CSS -->
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/bootstrap.min.css" rel="stylesheet">
+
 
 		<!-- Custom fonts-->
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/font-all.min.css" rel="stylesheet">
