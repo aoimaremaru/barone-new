@@ -146,12 +146,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 1.8em;
 	line-height: 1.333em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 1.5em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
@@ -605,6 +605,19 @@ POSTS & CONTENT STYLES
 				padding: 1.5em;
 				margin: 0 0 1.5em;
 				border-radius: 3px;
+			}
+
+			.youtube {
+				position: relative;
+				padding-top: 56.25%;
+			}
+			
+			.youtube iframe {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100% !important;
+				height: 100% !important;
 			}
 
 		} /* end .entry-content */
