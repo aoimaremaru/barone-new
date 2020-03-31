@@ -4778,6 +4778,9 @@ and more scalable.
 
 .top-catch-img {
   line-height: 0; }
+  .top-catch-img img {
+    width: 100%;
+    height: auto; }
 
 .top-catch-copy {
   background-color: black;
@@ -5182,6 +5185,14 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+.youtube-wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+  .youtube-wrapper .hentry {
+    width: 100%; }
+    .youtube-wrapper .hentry .entry-content {
+      padding: 1em 1em 0; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -5407,7 +5418,11 @@ you can add resource intensive styles.
     the footer.
     */ }
 
-  /* end .footer-links */ }
+  /* end .footer-links */
+  .youtube-wrapper .hentry {
+    width: 33%; }
+    .youtube-wrapper .hentry .entry-content {
+      padding: 0.5em 0.5em 0; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

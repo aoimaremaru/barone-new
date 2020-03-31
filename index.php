@@ -6,13 +6,54 @@
 
 						<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage">
 
+							<?php echo apply_filters( 'the_content', get_page(33)->post_content ); ?>
+							<?php echo apply_filters( 'the_content', get_page(9)->post_content ); ?>
+
+							<h2 class="mb-5 font-weight-bold text-center">Live Archive</h2>
+
+							<div class="youtube-wrapper">
+
+								<?php 
+									$args = array(
+										'post_type' => 'youtube',
+										'posts_per_page' => 6
+									);
+									$the_query = get_posts( $args );
+									if ( $the_query ) :
+										foreach ( $the_query as $post ) : setup_postdata( $post ); ?>
+
+											<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+												<section class="entry-content cf">
+
+													<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+
+													<?php the_excerpt(); ?>
+
+													<?php the_content(); ?>
+
+												</section>
+											</article>
+
+										<?php endforeach;
+										wp_reset_postdata();
+									else:
+									endif;
+								?>
+
+							</div>
+
+							<h2 class="mb-5 font-weight-bold text-center">Food</h2>
+							<?php echo apply_filters( 'the_content', get_page(18)->post_content ); ?>
+							<h2 class="mb-5 font-weight-bold text-center">Drink</h2>
+							<?php echo apply_filters( 'the_content', get_page(21)->post_content ); ?>
+							<h2 class="mb-5 font-weight-bold text-center">Access</h2>
+							<?php echo apply_filters( 'the_content', get_page(23)->post_content ); ?>
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article2">
 
 								<section class="entry-content cf" itemprop="articleBody">
-									<?php echo apply_filters( 'the_content', get_page(33)->post_content ); ?>
-									<?php echo apply_filters( 'the_content', get_page(9)->post_content ); ?>
 
 									<!--
 
@@ -54,18 +95,13 @@
 									</article>
 
 								-->
-									<h2 class="mb-5 font-weight-bold text-center">Food</h2>
-									<?php echo apply_filters( 'the_content', get_page(18)->post_content ); ?>
-									<h2 class="mb-5 font-weight-bold text-center">Drink</h2>
-									<?php echo apply_filters( 'the_content', get_page(21)->post_content ); ?>
-									<h2 class="mb-5 font-weight-bold text-center">Access</h2>
-									<?php echo apply_filters( 'the_content', get_page(23)->post_content ); ?>
+									
 								</section>
 							</article>
 
-							
-							
 
+
+							
 							<?php endwhile; ?>
 
 									<?php bones_page_navi(); ?>

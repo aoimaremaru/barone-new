@@ -361,6 +361,10 @@ and more scalable.
 }
 .top-catch-img{
 	line-height: 0;
+	img{
+		width: 100%;
+		height: auto;
+	}
 }
 .top-catch-copy{
 	background-color: black;
@@ -1081,3 +1085,17 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+.youtube-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+
+	.hentry{
+		width:100%;
+
+		.entry-content{
+			padding: 1em 1em 0;
+		}
+	}
+}
+	
