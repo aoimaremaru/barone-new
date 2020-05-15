@@ -5329,6 +5329,8 @@ you can add resource intensive styles.
       margin-left: auto; }
       #mainNav .nav-container .btn {
         width: 300px; }
+    #mainNav .navbar-toggler {
+      display: none; }
     #mainNav .navbar-brand {
       padding: .5rem 0;
       color: rgba(255, 255, 255, 0.5); }

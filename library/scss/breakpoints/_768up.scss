@@ -68,6 +68,9 @@ NAVIGATION STYLES
 			width: 300px;
 		}
 	}
+	.navbar-toggler {
+		display:none;
+	}
 	.navbar-brand {
 	padding: .5rem 0;
 	color: fade-out($white, .5);
