@@ -257,15 +257,19 @@ and more scalable.
 		margin-right: auto;
 		margin-left: auto;
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		.btn{
 			letter-spacing: 0.1rem;
 			border-radius: .25rem;
-			border: none;
+			//border: none;
 			line-height: 1.5;
 		}
+	}
+	.top-button-wrapper {
+		display: flex;
+		justify-content: left;
 	}
 	.navbar-toggler {
 		font-size: 80%;
@@ -338,6 +342,14 @@ and more scalable.
 #reqButton{
 	color: #fff;
 	background-color: #2686ec;
+	border-color: #2686ec;
+	padding: 0.5rem 1rem;
+	font-size: 110%;
+	margin-right: 0.3rem;
+}
+#recruitButton{
+	color: #2686ec;
+	
 	border-color: #2686ec;
 	padding: 0.5rem 1rem;
 	font-size: 110%;

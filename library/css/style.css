@@ -4693,14 +4693,16 @@ and more scalable.
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between; }
     #mainNav .nav-container .btn {
       letter-spacing: 0.1rem;
       border-radius: .25rem;
-      border: none;
       line-height: 1.5; }
+  #mainNav .top-button-wrapper {
+    display: flex;
+    justify-content: left; }
   #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
@@ -4755,6 +4757,13 @@ and more scalable.
 #reqButton {
   color: #fff;
   background-color: #2686ec;
+  border-color: #2686ec;
+  padding: 0.5rem 1rem;
+  font-size: 110%;
+  margin-right: 0.3rem; }
+
+#recruitButton {
+  color: #2686ec;
   border-color: #2686ec;
   padding: 0.5rem 1rem;
   font-size: 110%; }
@@ -5327,8 +5336,8 @@ you can add resource intensive styles.
       align-items: center;
       justify-content: space-between;
       margin-left: auto; }
-      #mainNav .nav-container .btn {
-        width: 300px; }
+    #mainNav .top-button-wrapper {
+      width: 100%; }
     #mainNav .navbar-toggler {
       display: none; }
     #mainNav .navbar-brand {
